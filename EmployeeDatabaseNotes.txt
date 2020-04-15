@@ -1,0 +1,370 @@
+Event Context + AppContext + TableContext
+(Employee Database)
+
+
+
+(src/app.js)
+——————————————————————————————————————————
+import React, { useState } from 'react';
+import Header from './components/Header/Header.js'
+import Table from './components/Table/Table.js'
+import SearchInput from './components/SearchInput/SearchInput.js'
+import { AppContext, EventContext } from './AppContexts.js';
+
+const App = () => {
+  const [searchText, setSearchText] = useState('');
+
+  const handleSearchInputChange = (event) => {
+    setSearchText(event.currentTarget.value);
+  }
+
+  const appContext = {
+    searchText,
+  }
+
+  const eventContext = {
+    onSearchInputChange: handleSearchInputChange,
+  }
+
+  return (
+    <AppContext.Provider value={appContext}>
+      <EventContext.Provider value={eventContext}>
+        <div className="App">
+          <Header />
+          <SearchInput />
+          <Table />
+        </div>
+      </EventContext.Provider>
+    </AppContext.Provider>
+  );
+}
+
+export default App;
+——————————————————————————————————————————
+
+This file imports the {EventContext} at the top of the file.  The <EventContext.Provider /> Component is used in the ‘return’ statement.  
+
+<EventContext.Provider /> is wrapped around a ‘div.App’’ Object that contains three components: <Header />, <SearchInput />, and <Table />.  
+
+<EventContext.Provider /> has a ‘value `prop` with the string literal of {eventContext}.
+????? {?? We are overwriting each Context Object with values from the `state` of ‘App.js’ and the {eventContext} string-literal. } 
+
+The only `state` set on App.js is ‘const [searchText, setSearchText]’, which is set equal to (‘’).  
+
+Above the ‘return’ statement that contains this bode-block, ‘eventContext’ is initialized as an Object.  
+
+——————————————————————————————————————————
+  const eventContext = {
+    onSearchInputChange: handleSearchInputChange,
+  }
+——————————————————————————————————————————
+
+The ‘handleSearchInputChange’ Method is set with a value of ‘onSearchInputChange.  
+
+‘const handleSearchInputChange’, an Event, calls the ‘setSearchText’ Object of the useState() Method, passing in an Argument of (event.currentTarget.value), which is the text value of the chosen input.  
+
+Overview of ‘App.js’ Usage of EventContext
+
+(It sets up the modification of the ‘searchText’ `state`, overwriting the previous value when a key is pressed.).  
+
+AppContexts.js exports the EventContext Imported by App.js
+
+——————————————————————————————————————————
+import React from 'react';
+
+export const AppContext = React.createContext();
+export const EventContext = React.createContext();
+——————————————————————————————————————————
+
+<SearchInput /> Receives ‘onClick={eventContext.onSearchInputChange}’
+
+———————————————————————————————————————
+import React from 'react';
+import {AppContext,EventContext} from '../../AppContexts';
+import './style.css'
+
+const SearchInput = () => {
+    const appContext = React.useContext(AppContext);
+    const eventContext = React.useContext(EventContext);
+
+    console.log(AppContext);
+    return (
+    <div className='container'>
+     <input
+     value={appContext.searchText}
+     onChange={eventContext.onSearchInputChange}
+     className='form-control form-control-lg' type='text' 
+     placeholder='Search By Employee Name' 
+     />
+     </div>
+    )
+}
+
+export default SearchInput;
+———————————————————————————————————————
+
+  onChange={eventContext.onSearchInputChange} =  This is where the ‘onSearchInputChange’ sequence ends.  
+
+The ‘eventContext’ value from the string-literal in <App /> 
+
+appContext + Obtaining Value of Search
+
+<App /> has two `Contexts` defined: ‘const eventContext’, relating to {EventContext}, and ‘const appContext’, relating to {AppContext}.  {EventContext, AppContext} are defined inside  ‘./AppContexts.js’.  
+
+The value of the <input> Element comprising <SearchInput /> Component relies on appContext.
+
+———————————————————————————————————————
+   <input
+     value={appContext.searchText}
+     onChange={eventContext.onSearchInputChange}
+     className='form-control form-control-lg' type='text' 
+     placeholder='Search By Employee Name' 
+     />
+———————————————————————————————————————
+
+value={appContext.searchText} =  This sets the ‘event.target.value’ for the <SearchInput />. 
+
+‘const appContext’ has only ‘searchText’ as both Property and Value in ‘App.js’
+
+(src/App.js)
+———————————————————————————————————————
+const appContext = {
+    searchText,
+  }
+———————————————————————————————————————
+
+This line of code sets whatever is inside <SearchInput /> to be perpetually equal to the ‘event.target.value’ by continually changing the ‘searchText’ `state` every time a keypress() occurs. 
+
+The code for triggering the onChange Event to start searchText is located in <Table /> Component.
+
+———————————————————————————————————————
+    if (searchText !== '') {
+        toBeDisplayedEmployee = toBeDisplayedEmployee.filter(({ name }) => new RegExp(searchText, 'g').test(name));
+    }
+———————————————————————————————————————
+
+{searchText} is brought to the <Table /> by AppContext (see below).
+
+<Table /> Has Second EventContext Defined
+
+Table.js Has Similar Pattern but uses ‘const handleTableHeaderClick’, an Event function, as the value for ‘onTableHeaderClick’ inside of an ‘eventContext’ Object.
+
+——————————————————————————————————————————
+import React, { useState } from 'react';
+import employees from '../../employees.json'
+import TableRow from './subComponent/TableRow/TableRow.js'
+import TableHeader from './subComponent/TableHeader/TableHeader.js'
+import { AppContext } from '../../AppContexts.js'
+import { Eve ntContext, TableContext } from './tableContexts.js';
+
+const Table = () => {
+
+    const [sortBy, setSortBy] = useState();
+    const [sortOrder, setSortOrder] = useState();
+
+    const { searchText } = React.useContext(AppContext);
+
+    const handleTableHeaderClick = (event) => {
+        const target = event.currentTarget;
+        const id = target.getAttribute('data-id');
+        setSortBy(id);
+    }
+
+    const tableContext = {
+        sortBy,
+        sortOrder,
+    }
+
+    const eventContext = {
+        onTableHeaderClick: handleTableHeaderClick
+    }
+
+    let toBeDisplayedEmployee = [...employees]
+
+    if (searchText !== '') {
+        toBeDisplayedEmployee = toBeDisplayedEmployee.filter(({ name }) => new RegExp(searchText, 'g').test(name));
+    }
+
+    const sortOrderModifier = sortOrder === 'ASC' ? 1 : -1;
+
+    switch (sortBy) {
+        case "Image":
+            toBeDisplayedEmployee = toBeDisplayedEmployee.sort((a, b) => a.image.localeCompare(b.image));
+            break;
+        case "Name":
+            toBeDisplayedEmployee = toBeDisplayedEmployee.sort((a, b) => a.name.localeCompare(b.name));
+            break;
+        case "Phone":
+            toBeDisplayedEmployee = toBeDisplayedEmployee.sort((a, b) => a.phone.localeCompare(b.phone));
+            break;
+        case "Email":
+            toBeDisplayedEmployee = toBeDisplayedEmployee.sort((a, b) => a.email.localeCompare(b.email));
+            break;
+        case "DOB":
+            toBeDisplayedEmployee = toBeDisplayedEmployee.sort((a, b) => a.dob.localeCompare(b.dob));
+            break;
+        default:
+            break;
+    }
+
+    return (
+        <TableContext.Provider value={tableContext}>
+            <EventContext.Provider value={eventContext}>
+                <div class="card-body">
+                    <table class='table table-striped'>
+                        <thead>
+                            <tr>
+                                <TableHeader
+                                    text="Image"
+                                />
+                                <TableHeader
+                                    text="Name"
+                                />
+                                <TableHeader
+                                    text="Phone"
+                                />
+                                <TableHeader
+                                    text="Email"
+                                />
+                                <TableHeader
+                                    text="DOB"
+                                />
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {
+                                toBeDisplayedEmployee.map((employee) => (
+                                    <TableRow
+                                        key={employee.id}
+                                        employee={employee}
+                                    />
+                                ))
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </EventContext.Provider>
+        </TableContext.Provider>
+    )
+}
+
+export default Table;
+———————————————————————————————————————
+
+The {eventContext} Object defined above is used in two Components: <SearchInput /> and <TableHeader />.  
+
+<TableHeader /> is a child of <Table.js />, but <SearchInput /> is a parent Component, being only attached to <App />. 
+ 
+<EventContext /> for ‘Table.js’ is defined and exported inside ‘tableContexts.js’.  
+
+(src/tableContexts.js)
+———————————————————————————————————————
+import React from 'react';
+
+export const TableContext = React.createContext();
+export const EventContext = React.createContext();———————————————————————————————————————
+
+<TableHeader /> Receives ‘onClick={eventContext.onTableHeaderClick}’
+
+(src/components/Table/subComponent/TableHeader/TableHeader.js)
+———————————————————————————————————————
+import React from 'react';
+import {EventContext, TableContext} from '../../tableContexts.js';
+import './style.css'
+
+const TableHeader = (props) => {
+const tableContext = React.useContext(TableContext);
+const eventContext = React.useContext(EventContext);
+
+    const {
+        text
+    } = props;
+
+    const {
+        sortBy,
+        sortOrder
+    } = tableContext
+
+    return (
+            <th className="header"
+            data-id={text}
+            onClick={eventContext.onTableHeaderClick}
+            >
+            {text}
+           { sortBy === text && sortOrder} 
+            </th>
+    )
+}
+
+export default TableHeader;
+———————————————————————————————————————
+
+The ‘handleTableHeaderClick’ Method, which is called by the ‘onTableHeaderClick’ Inline Event comes from the definition of ‘eventContext’. 
+
+The ‘handleTableHeaderClick’ Method is also tied to ‘tableContext’ Object, which functions similar to appContext in that it modifies `state`.  ‘tableContext’ modifies the ‘sortBy’ and ‘sortOrder’ `states` to ascending order. 
+
+tableContext is also in this line, and it is used to bring the `sortBy` and `sortOrder` states to the <TableHeader /> Component. 
+
+Data-Attributes and Employee Database Code
+
+data-attributes are used in the code to identify which <TableHeader /> Component has been clicked between ‘Image’, ‘Name’, ‘Phone’, ‘Email’, and ‘DOB’.  
+
+The data-attribute is introduced in the <TableHeader /> Component.  
+
+———————————————————————————————————————
+const tableContext = React.useContext(TableContext);
+const eventContext = React.useContext(EventContext);
+
+    const {
+        text
+    } = props;
+
+    const {
+        sortBy,
+        sortOrder
+    } = tableContext
+
+    return (
+            <th className="header"
+            data-id={text}
+            onClick={eventContext.onTableHeaderClick}
+            >
+            {text}
+           { sortBy === text && sortOrder} 
+            </th>
+    )
+}
+———————————————————————————————————————
+
+‘data-id’ is given to one of the five <TableHeader /> Components after the ‘onTableHeaderClick’ Method is triggered, and the resulting data-id is the {text} `prop` from <TableHeader />, “Image”, “Name”, “Phone”, “Email”, “DOB”.  
+
+———————————————————————————————————————
+ <tr>
+        <TableHeader
+           text="Image"
+            />
+           <TableHeader
+                text="Name"
+             />
+           <TableHeader
+                text=“Phone"
+            />
+            <TableHeader
+                text="Email"
+            />
+            <TableHeader
+                text="DOB"
+            /></tr>
+———————————————————————————————————————
+
+The data-attribute is then retrieved in the ‘handleTableHeaderClick’ Method, using the .getAttribute() Method.  
+
+———————————————————————————————————————
+  const handleTableHeaderClick = (event) => {
+        const target = event.currentTarget;
+        const id = target.getAttribute('data-id');
+        setSortBy(id);
+    }
+———————————————————————————————————————
+
+The ‘event.target’ value is then combined with the ‘data-id’, creating a ‘const id’, which is then passed into the setSortBy useState() Method.  
