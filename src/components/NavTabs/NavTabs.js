@@ -7,7 +7,7 @@ const NavTabs = () => {
     return (
         <ul className='nav nav-tabs'>
             <li className='nav-item'>
-            <Link to="/" className={location.pathname === '/' ? 'nav-link active' : 'nav-link'}>
+            <Link to="/" className={location.pathname === "/" ? 'nav-link active' : 'nav-link'}>
                 Home
             </Link>
             </li>
@@ -26,11 +26,11 @@ const NavTabs = () => {
                 Contact
             </Link>
             </li>
-            {/* <li className='nav-item'>
-            <Link to="/contact" className={location.pathname === '/contact/learn' ? 'nav-link active' : 'nav-link'}>
+            <li className='nav-item'>
+            <Link to="/contact/learn" className={location.pathname === "/contact/learn" ? 'nav-link active' : 'nav-link'}>
                 Learn
             </Link>
-            </li> */}
+            </li>
         </ul>
     )
 }
