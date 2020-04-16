@@ -3,6 +3,7 @@ import { Link, Route } from 'react-router-dom';
 import Learn from './Learn';
 
 const Contact = (props) => {
+  
   return (
     <div>
       <p>Contact Page</p>
