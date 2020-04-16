@@ -14,31 +14,31 @@ const Project = () => {
             <div classNameName="grid">
                 <div classNameName="box box1">
                     <div className="card">
-                        <img src={CodingQuiz} className="card-img-top" alt="..."></img>
+                        <img src={IngredienceIntro} className="card-img-top" alt="..."></img>
                         <div className="card-body">
                             <h5 className="card-title">Card 1</h5>
                             <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" className="btn btn-primary">Go somewhere</a>
+                            <a href="https://github.com/SeanCdeveloper/ingredience" className="btn btn-primary">Go somewhere</a>
                         </div>
                     </div>
                 </div>
                 <div classNameName="box box2">
                     <div className="card">
-                        <img src={IngredienceIntro} className="card-img-top" alt="..."></img>
+                        <img src={TripTips} className="card-img-top" alt="..."></img>
                         <div className="card-body">
                             <h5 className="card-title">Card 2</h5>
                             <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" className="btn btn-primary">Go somewhere</a>
+                            <a href="https://github.com/SeanCdeveloper/TripTips-" className="btn btn-primary">Go somewhere</a>
                         </div>
                     </div>
                 </div>
                 <div classNameName="box box3">
                     <div className="card">
-                        <img src={TripTips} className="card-img-top" alt="..."></img>
+                        <img src={CodingQuiz} className="card-img-top" alt="..."></img>
                         <div className="card-body">
                             <h5 className="card-title">Card 3</h5>
                             <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" className="btn btn-primary">Go somewhere</a>
+                            <a href='https://github.com/SeanCdeveloper/codingQuiz-Time' className="btn btn-primary">Go somewhere</a>
                         </div>
                     </div>
                 </div>
@@ -48,7 +48,7 @@ const Project = () => {
                         <div className="card-body">
                             <h5 className="card-title">Card 4</h5>
                             <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" className="btn btn-primary">Go somewhere</a>
+                            <a href="https://github.com/SeanCdeveloper/DynamicWeatherAPP" className="btn btn-primary">Go somewhere</a>
                         </div>
                     </div>
                 </div>
@@ -58,7 +58,7 @@ const Project = () => {
                         <div className="card-body">
                             <h5 className="card-title">Card 5</h5>
                             <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" className="btn btn-primary">Go somewhere</a>
+                            <a href="https://github.com/SeanCdeveloper/EmployeeTracker" className="btn btn-primary">Go somewhere</a>
                         </div>
                     </div>
                 </div>
@@ -68,7 +68,7 @@ const Project = () => {
                         <div className="card-body">
                             <h5 className="card-title">Card 6</h5>
                             <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" className="btn btn-primary">Go somewhere</a>
+                            <a href="https://github.com/SeanCdeveloper/EmployeeDatabase" className="btn btn-primary">Go somewhere</a>
                         </div>
                     </div>
                 </div>
