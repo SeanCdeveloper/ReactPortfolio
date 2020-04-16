@@ -1,21 +1,81 @@
 import React from 'react';
 import './styles.css';
+import CodingQuiz from '../../Images/CodingQuiz-Timer.png'
+import EmployeeManagementCLI from '../../Images/employee-managementCLI.png'
+import IngredienceIntro from '../../Images/IngredienceIntro.png'
+import WeatherApp from '../../Images/weatherApp.png'
+import TripTips from '../../Images/tripTips1.gif'
+import EmployeeDirectory from '../../Images/EmployeeDirectory.png'
 
 const Project = () => {
     return (
         <div>
             <p>Features</p>
-            <div className="grid">
-                <div className="box box1">1</div>
-                <div className="box box2">2</div>
-                <div className="box box3">3</div>
-                <div className="box box4">4</div>
-                <div className="box box5">5</div>
-                <div className="box box6">6</div>
-                <div className="box box7">7</div>
-                <div className="box box8">8</div>
-                <div className="box box9">9</div>
-                <div className="box box10">10</div>
+            <div classNameName="grid">
+                <div classNameName="box box1">
+                    <div className="card">
+                        <img src={CodingQuiz} className="card-img-top" alt="..."></img>
+                        <div className="card-body">
+                            <h5 className="card-title">Card 1</h5>
+                            <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" className="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+                <div classNameName="box box2">
+                    <div className="card">
+                        <img src={IngredienceIntro} className="card-img-top" alt="..."></img>
+                        <div className="card-body">
+                            <h5 className="card-title">Card 2</h5>
+                            <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" className="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+                <div classNameName="box box3">
+                    <div className="card">
+                        <img src={TripTips} className="card-img-top" alt="..."></img>
+                        <div className="card-body">
+                            <h5 className="card-title">Card 3</h5>
+                            <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" className="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+                <div classNameName="box box4">
+                    <div className="card">
+                        <img src={WeatherApp} className="card-img-top" alt="..."></img>
+                        <div className="card-body">
+                            <h5 className="card-title">Card 4</h5>
+                            <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" className="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+                <div classNameName="box box5">
+                    <div className="card">
+                        <img src={EmployeeManagementCLI} className="card-img-top" alt="..."></img>
+                        <div className="card-body">
+                            <h5 className="card-title">Card 5</h5>
+                            <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" className="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+                <div classNameName="box box6">
+                    <div className="card">
+                        <img src={EmployeeDirectory} className="card-img-top" alt="..."></img>
+                        <div className="card-body">
+                            <h5 className="card-title">Card 6</h5>
+                            <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" className="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+                <div classNameName="box box7">7</div>
+                <div classNameName="box box8">8</div>
+                <div classNameName="box box9">9</div>
+                <div classNameName="box box10">10</div>
             </div>
         </div>
     )
