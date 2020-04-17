@@ -11,7 +11,7 @@ const Project = () => {
     return (
         <div>
             <p>Features</p>
-            <div classNameName="grid">
+            <div classNameName="container">
                 {/* <div classNameName="box box1"> */}
                     <div className="card card1">
                         <img src={IngredienceIntro} className="card-img-top" alt="..."></img>
@@ -72,10 +72,10 @@ const Project = () => {
                         </div>
                     </div>
                 </div>
-                <div classNameName="box box7">7</div>
-                <div classNameName="box box8">8</div>
-                <div classNameName="box box9">9</div>
-                <div classNameName="box box10">10</div>
+                <div classNameName="box box7"></div>
+                <div classNameName="box box8"></div>
+                <div classNameName="box box9"></div>
+                <div classNameName="box box10"></div>
             </div>
         </div>
     )
