@@ -1,15 +1,17 @@
 .box1, .box2, .box3, .box4, .box5, .box6, .box7, .box8, .box9, .box10 {
-    background-color: #d3d3d3;
+    background-color: green;
     border-radius: 10px;
     overflow: hidden;
     height: 200px;
     max-height: 35vh;
     -webkit-box-shadow: 0px 12px 18px -6px rgba(0,0,0,0,.3);
     box-shadow: 0px 12px 18px -6px rgba(0,0,0,0,.3);
+    margin-top: 100px;
 }
 
 .box {
     margin: 20px;
+    margin-top: 100px;
 }
 
 .grid {
@@ -22,6 +24,16 @@
 .grid > div {
     flex-basis: calc(33% - 40px)
 }
+
+ .card {
+    margin-top: 100px;
+    background: lightblue;
+}
+
+
+/* .card2, .card3, .card4, .card5, .card6, .card7, .card8, .card9, .card10 {
+    margin-top: 100px;
+} */
 
 /* flex-basis: calc(20% - 40px) */ 
 

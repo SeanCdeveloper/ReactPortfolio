@@ -12,8 +12,8 @@ const Project = () => {
         <div>
             <p>Features</p>
             <div classNameName="grid">
-                <div classNameName="box box1">
-                    <div className="card">
+                {/* <div classNameName="box box1"> */}
+                    <div className="card card1">
                         <img src={IngredienceIntro} className="card-img-top" alt="..."></img>
                         <div className="card-body">
                             <h5 className="card-title">Card 1</h5>
@@ -21,9 +21,9 @@ const Project = () => {
                             <a href="https://github.com/SeanCdeveloper/ingredience" className="btn btn-primary">Go somewhere</a>
                         </div>
                     </div>
-                </div>
+                {/* </div> */}
                 <div classNameName="box box2">
-                    <div className="card">
+                    <div className="card card2">
                         <img src={TripTips} className="card-img-top" alt="..."></img>
                         <div className="card-body">
                             <h5 className="card-title">Card 2</h5>
@@ -33,7 +33,7 @@ const Project = () => {
                     </div>
                 </div>
                 <div classNameName="box box3">
-                    <div className="card">
+                    <div className="card card3">
                         <img src={CodingQuiz} className="card-img-top" alt="..."></img>
                         <div className="card-body">
                             <h5 className="card-title">Card 3</h5>
@@ -43,7 +43,7 @@ const Project = () => {
                     </div>
                 </div>
                 <div classNameName="box box4">
-                    <div className="card">
+                    <div className="card card4">
                         <img src={WeatherApp} className="card-img-top" alt="..."></img>
                         <div className="card-body">
                             <h5 className="card-title">Card 4</h5>
@@ -63,7 +63,7 @@ const Project = () => {
                     </div>
                 </div>
                 <div classNameName="box box6">
-                    <div className="card">
+                    <div className="card card6">
                         <img src={EmployeeDirectory} className="card-img-top" alt="..."></img>
                         <div className="card-body">
                             <h5 className="card-title">Card 6</h5>
