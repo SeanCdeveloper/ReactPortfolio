@@ -4,7 +4,6 @@ const ImgOverlayCard = () => {
     return (
         <div class="card card-cascade wider">
 
-
             <div class="view view-cascade overlay">
                 <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/photo6.jpg" alt="Card image cap"/>
                     <a href="#!">
