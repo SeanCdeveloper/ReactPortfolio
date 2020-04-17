@@ -1,7 +1,9 @@
 .jumbotron {
-    background: rgb(3, 3, 114);
+    /* background: rgb(3, 3, 114); */
+    background: #e0a800;
     color: white;
     font-size: 18pt;
     font-family: fantasy;
 }
 
+/* e0a800 */
