@@ -11,7 +11,7 @@ const Project = () => {
     return (
         <div>
             <p>Features</p>
-            <div classNameName="container">
+            <div className="container-fluid">
                 {/* <div classNameName="box box1"> */}
                     <div className="card card1">
                         <img src={IngredienceIntro} className="card-img-top" alt="..."></img>
@@ -22,7 +22,7 @@ const Project = () => {
                         </div>
                     </div>
                 {/* </div> */}
-                <div classNameName="box box2">
+                <div className="box box2">
                     <div className="card card2">
                         <img src={TripTips} className="card-img-top" alt="..."></img>
                         <div className="card-body">
@@ -32,7 +32,7 @@ const Project = () => {
                         </div>
                     </div>
                 </div>
-                <div classNameName="box box3">
+                <div className="box box3">
                     <div className="card card3">
                         <img src={CodingQuiz} className="card-img-top" alt="..."></img>
                         <div className="card-body">
@@ -42,7 +42,7 @@ const Project = () => {
                         </div>
                     </div>
                 </div>
-                <div classNameName="box box4">
+                <div className="box box4">
                     <div className="card card4">
                         <img src={WeatherApp} className="card-img-top" alt="..."></img>
                         <div className="card-body">
@@ -52,7 +52,7 @@ const Project = () => {
                         </div>
                     </div>
                 </div>
-                <div classNameName="box box5">
+                <div className="box box5">
                     <div className="card">
                         <img src={EmployeeManagementCLI} className="card-img-top" alt="..."></img>
                         <div className="card-body">
@@ -62,7 +62,7 @@ const Project = () => {
                         </div>
                     </div>
                 </div>
-                <div classNameName="box box6">
+                <div className="box box6">
                     <div className="card card6">
                         <img src={EmployeeDirectory} className="card-img-top" alt="..."></img>
                         <div className="card-body">
@@ -72,10 +72,10 @@ const Project = () => {
                         </div>
                     </div>
                 </div>
-                <div classNameName="box box7"></div>
-                <div classNameName="box box8"></div>
-                <div classNameName="box box9"></div>
-                <div classNameName="box box10"></div>
+                <div className="box box7"></div>
+                <div className="box box8"></div>
+                <div className="box box9"></div>
+                <div className="box box10"></div>
             </div>
         </div>
     )

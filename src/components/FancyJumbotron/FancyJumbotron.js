@@ -17,7 +17,7 @@ const FancyJumbotron = () => {
         optio vero odio nam sit officia accusamus minus error nisi architecto nulla ipsum dignissimos. Odit sed qui, dolorum!
       </p>
       {/* <a className="btn btn-outline-red btn-md"><i className="fas fa-clone left"></i> View project</a> */}
-      <Link to="/about" role="button" className="btn btn1 btn-link"><div class="text-center">
+      <Link to="/about" role="button" className="btn btn1 btn-link"><div className="text-center">
   <button type="button" className="btn btn-primary">Primary</button></div></Link>
   <button type="button" className="btn btn-outline-red btn-md">Primary</button> 
     </div>
