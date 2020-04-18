@@ -10,9 +10,7 @@ import EmployeeDirectory from '../../Images/EmployeeDirectory.png'
 const Project = () => {
     return (
         <div>
-            <p>Features</p>
             <div className="container-fluid">
-                {/* <div classNameName="box box1"> */}
                     <div className="card card1">
                         <img src={IngredienceIntro} className="card-img-top" alt="..."></img>
                         <div className="card-body">
@@ -21,7 +19,6 @@ const Project = () => {
                             <a href="https://github.com/SeanCdeveloper/ingredience" className="btn btn-primary">Go somewhere</a>
                         </div>
                     </div>
-                {/* </div> */}
                 <div className="box box2">
                     <div className="card card2">
                         <img src={TripTips} className="card-img-top" alt="..."></img>

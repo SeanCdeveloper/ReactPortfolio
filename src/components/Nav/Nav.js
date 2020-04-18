@@ -4,7 +4,7 @@ const Nav = () => {
 
     return(
         <div>
-            <nav>Nav</nav>
+            <nav></nav>
         </div>
     )
 

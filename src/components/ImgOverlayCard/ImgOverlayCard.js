@@ -1,68 +1,18 @@
 import React from 'react';
+import myProfilePic from '../../Images/myProfilePic.jpg';
 
 const ImgOverlayCard = () => {
-    return (
-        <div className="card card-cascade wider">
-
-            <div className="view view-cascade overlay">
-                <img className="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/photo6.jpg" alt="Card image cap"/>
-                    <a href="#!">
-                        <div className="mask rgba-white-slight"></div>
-                    </a>
-
-                    <div className="card-body card-body-cascade text-center">
-
-
-                        <h4 className="card-title"><strong>Alison Belmont</strong></h4>
-
-                        <h5 className="blue-text pb-2"><strong>Graffiti Artist</strong></h5>
-
-                        <p className="card-text">Sed ut perspiciatis unde omnis iste natus sit voluptatem accusantium doloremque
-    laudantium, totam rem aperiam. </p>
-
-
-                        <a className="px-2 fa-lg li-ic"><i className="fab fa-linkedin-in"></i></a>
-
-                        <a className="px-2 fa-lg tw-ic"><i className="fab fa-twitter"></i></a>
-
-                        <a className="px-2 fa-lg fb-ic"><i className="fab fa-facebook-f"></i></a>
-
-                    </div>
-            </div>
-        </div>
+  return (
+    <img src={myProfilePic} className="card-img-top" alt="..."></img>
+   
       )
 }
 
 export default ImgOverlayCard;
 
-            {/* <div className="card card-cascade wider">
-
-  
-  <div className="view view-cascade overlay">
-    <img className="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/photo6.jpg" alt="Card image cap">
-    <a href="#!">
-      <div className="mask rgba-white-slight"></div>
-    </a>
+{/* <div class="card" style="width: 18rem;">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
   </div>
-
-  
-  <div className="card-body card-body-cascade text-center">
-
-    
-    <h4 className="card-title"><strong>Alison Belmont</strong></h4>
-    
-    <h5 className="blue-text pb-2"><strong>Graffiti Artist</strong></h5>
-    
-    <p className="card-text">Sed ut perspiciatis unde omnis iste natus sit voluptatem accusantium doloremque
-      laudantium, totam rem aperiam. </p>
-
-    
-    <a className="px-2 fa-lg li-ic"><i className="fab fa-linkedin-in"></i></a>
-    
-    <a className="px-2 fa-lg tw-ic"><i className="fab fa-twitter"></i></a>
-    
-    <a className="px-2 fa-lg fb-ic"><i className="fab fa-facebook-f"></i></a>
-
-  </div>
-
 </div> */}

@@ -1,16 +1,3 @@
-// import React from 'react';
-
-// const Learn = () => {
-//     return (
-//         <div>
-//         <h1>This is the Learn Page</h1>
-//         <p>Learn Page</p>
-//         </div>
-//     )
-// }
-
-// export default Learn;
-
 import React from "react";
 
 function Learn() {

@@ -18,7 +18,7 @@ const FancyJumbotron = () => {
       </p>
       {/* <a className="btn btn-outline-red btn-md"><i className="fas fa-clone left"></i> View project</a> */}
       <Link to="/about" role="button" className="btn btn1 btn-link"><div className="text-center">
-  <button type="button" className="btn btn-primary">Primary</button></div></Link>
+      <button type="button" className="btn btn-outline-red btn-md">Primary</button></div></Link>
   <button type="button" className="btn btn-outline-red btn-md">Primary</button> 
     </div>
   </div>
@@ -28,21 +28,3 @@ const FancyJumbotron = () => {
 
 export default FancyJumbotron;
 
-{/* <div className="card text-center">
-<div className="card-header">
-  Featured
-</div>
-<div className="card-body">
-  <h5 className="card-title">Special title treatment</h5>
-  <p className="card-text">With supporting text below as a natural lead-in to additional content.</p>
-  <a href="#" className="btn btn-primary">Go somewhere</a>
-</div>
-<div className="card-footer text-muted">
-  2 days ago
-</div>
-</div>
-
-style={{backgroundColor: 'red'}}
-*/}
-
-{/* <div className="jumbotron cardImg1 card card-image" style={{background: "black"}} */}

@@ -16,4 +16,3 @@ const Footer = () => {
 
 export default Footer;
 
-{/* <footer style={{background:'grey'}}>Footer</footer> */ }

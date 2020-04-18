@@ -7,7 +7,6 @@ const Contact = (props) => {
   
   return (
     <div>
-      <p>Contact Page</p>
       <div>
       <ContactForm/>
       </div>
