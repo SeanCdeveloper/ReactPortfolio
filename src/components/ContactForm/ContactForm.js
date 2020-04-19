@@ -41,8 +41,8 @@ const ContactForm = () => {
                     <textarea onChange={handleInputChange} className="form-control" name="message" rows="3" />
                 </div>
                 <button onClick={handleFormSubmit} type="submit" className="btn btn-outline-primary">Submit</button>
+                <div className="push" style={{height:"200px", backgroundColor: "white"}}></div>
             </form>
-            <div className="push"></div>
         </div>
         
     )
