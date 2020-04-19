@@ -11,7 +11,7 @@ const FancyJumbotron = () => {
     <div>
       <h2 className="card-title h1-responsive pt-3 mb-5 font-bold"><strong>Sean Cumming's Coding Page</strong></h2>
       <p className="mx-5 mb-5"></p>
-      <Link to="/about" role="button" className="btn btn1 btn-link"><div className="text-center">
+      <Link to="/portfolio" role="button" className="btn btn1 btn-link"><div className="text-center">
       <button style={{height: "4em", fontSize: "20px"}} type="button" className="btn btn-outline-red btn-red">View Portfolio</button></div></Link>
     </div>
   </div>

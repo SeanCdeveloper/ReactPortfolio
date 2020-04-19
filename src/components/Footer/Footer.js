@@ -7,7 +7,7 @@ const Footer = () => {
         <div>
             <footer style={{background: 'black'}} className="page-footer">
             <div className="footer-copyright text-center py-3">© 2020 Copyright:
-              <a href="https://mdbootstrap.com/">&nbsp;SCDeveloper</a>
+              <a href="#">&nbsp;SCDeveloper</a>
             </div>
             </footer>
         </div>
