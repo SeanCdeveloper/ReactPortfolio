@@ -15,7 +15,7 @@ const FancyJumbotron = () => {
       <p className="mx-5 mb-5"></p>
       {/* <a className="btn btn-outline-red btn-md"><i className="fas fa-clone left"></i> View project</a> */}
       <Link to="/about" role="button" className="btn btn1 btn-link"><div className="text-center">
-      <button style={{height: "4em", fontSize: "20px"}} type="button" className="btn btn-outline-red btn-red">Enter Site</button></div></Link>
+      <button style={{height: "4em", fontSize: "20px"}} type="button" className="btn btn-outline-red btn-red">View Portfolio</button></div></Link>
     </div>
   </div>
 </div>
