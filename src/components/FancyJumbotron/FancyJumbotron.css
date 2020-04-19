@@ -8,13 +8,10 @@
 } 
 
 img {
-    width: 10em;
+    /* width: 10em; */
     height: auto;
     text-align: center;
 }
 
-.btn {
-    color: white;
-    
-}
+
 
