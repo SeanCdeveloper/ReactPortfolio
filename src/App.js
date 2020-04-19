@@ -16,10 +16,8 @@ const App = () => {
   return (
     <Router>
     <div>
-      {/* <Nav /> */}
      <NavTabs />
      <Header />
-     {/* <Project /> */}
     <Route exact path="/" component={Home}/> 
     <Route exact path="/about" component={About}/>
     <Route exact path="/portfolio" component={Portfolio}/>

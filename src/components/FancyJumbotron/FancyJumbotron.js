@@ -9,7 +9,6 @@ const FancyJumbotron = () => {
     <div className="text-white fancy-jumbo text-center py-5 px-4">
       <div className="jumbotron cardImg1 card card-image" style={{background: "black"}}>
         <div>
-      {/* <img src={ProfilePic}/> */}
       </div>
     <div>
       <h2 className="card-title h1-responsive pt-3 mb-5 font-bold"><strong>Create your beautiful website with MDBootstrap</strong></h2>
@@ -18,8 +17,7 @@ const FancyJumbotron = () => {
       </p>
       {/* <a className="btn btn-outline-red btn-md"><i className="fas fa-clone left"></i> View project</a> */}
       <Link to="/about" role="button" className="btn btn1 btn-link"><div className="text-center">
-      <button type="button" className="btn btn-outline-red btn-md">Primary</button></div></Link>
-  <button type="button" className="btn btn-outline-red btn-md">Primary</button> 
+      <button style={{height: "4em", fontSize: "20px"}} type="button" className="btn btn-outline-red btn-red">Enter Site</button></div></Link>
     </div>
   </div>
 </div>
