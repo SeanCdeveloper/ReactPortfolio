@@ -1,13 +1,13 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import './style.css';
 
 const ContactForm = () => {
-        const [formObject, setFormObject] = useState('');
+    const [formObject, setFormObject] = useState('');
 
-        const handleInputChange = event => {
+    const handleInputChange = event => {
         console.log(event);
-        const {name,value} = event.target;
-        setFormObject({...formObject, [name]: value})
+        const { name, value } = event.target;
+        setFormObject({ ...formObject, [name]: value })
     }
 
     const handleFormSubmit = event => {
@@ -20,23 +20,25 @@ const ContactForm = () => {
         <div className="container">
             <form>
                 <div className="form-group">
-                    <input 
-                    type="name" 
-                    name="name" 
-                    className='form-control'
-                    onChange={handleInputChange}
+                    <label for="email">Name:</label>
+                    <input
+                        type="name"
+                        name="name"
+                        className='form-control'
+                        onChange={handleInputChange}
                     />
-                    <small id="emailHelp" className="form-text text-muted">We'll never share your email with anyone else.</small>
                 </div>
                 <div className="form-group">
-                    <input 
-                    type="email" 
-                    name="email" 
-                    onChange={handleInputChange}
-                    className='form-control'/>
+                    <label for="email">Email:</label>
+                    <input
+                        type="email"
+                        name="email"
+                        onChange={handleInputChange}
+                        className='form-control' />
                 </div>
                 <div className="form-group">
-                    <textarea onChange={handleInputChange} className="form-control"  name="message" rows="3"/>
+                    <label for="message">Message:</label>
+                    <textarea onChange={handleInputChange} className="form-control" name="message" rows="3" />
                 </div>
                 <button onClick={handleFormSubmit} type="submit" className="btn btn-outline-primary">Submit</button>
             </form>

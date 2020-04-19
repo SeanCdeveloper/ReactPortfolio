@@ -1,64 +1,6 @@
-/* .box1, .box2, .box3, .box4, .box5, .box6, .box7, .box8, .box9, .box10 {
-    background-color: green;
-    border-radius: 10px;
-    overflow: hidden;
-    height: 200px;
-    max-height: 35vh;
-    -webkit-box-shadow: 0px 12px 18px -6px rgba(0,0,0,0,.3);
-    box-shadow: 0px 12px 18px -6px rgba(0,0,0,0,.3);
-    margin-top: 100px;
-}
-
-.box {
-    margin: 20px;
-    margin-top: 100px;
-}
-
-.grid {
-    min-height: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-}
-
-.grid > div {
-    flex-basis: calc(33% - 40px)
-} */
-
  .card {
     margin-top: 100px;
     background: #d3d3d3;
 }
 
-
-/* .card2, .card3, .card4, .card5, .card6, .card7, .card8, .card9, .card10 {
-    margin-top: 100px;
-} */
-
-/* flex-basis: calc(20% - 40px) */ 
-
-/* Changing CSS Grid ? X ? Values */
-
-/* 20% is for a 5 X 2 Grid of 10 Boxes 
-
-5/100 = 20%
-*/
-
-/* 
-
-33% is for a 3 X 3 Grid
-
-flex-basis: calc(33% - 40 px)} 
-
-3/100 = 33%
-
-33% will give you a 3 X 3 Grid. 
-
-*/
-
-/* Changing the Grid to be [ 2 X ? ] 
-
-2/100 = 50%;
-
-*/
 
