@@ -42,7 +42,9 @@ const ContactForm = () => {
                 </div>
                 <button onClick={handleFormSubmit} type="submit" className="btn btn-outline-primary">Submit</button>
             </form>
+            <div className="push"></div>
         </div>
+        
     )
 }
 

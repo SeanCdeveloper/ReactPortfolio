@@ -14,7 +14,7 @@ const Project = () => {
                     <div className="card card1">
                         <img src={IngredienceIntro} className="card-img-top" alt="..."></img>
                         <div className="card-body">
-                            <h5 className="card-title">Ingredience</h5>
+                            <h5 className="card-title" style={{fontFamily: "fantasy"}}>Ingredience</h5>
                             <p className="card-text" style={{fontFamily: "fantasy", fontSize: "16pt"}}>The purpose of this application is allowing users to find recipes based
                                 on needs, preferences, and/or ingredients they already have.&nbsp;
                                 The user can enter any ingredient contained in their pantry or refrigerator and receive
@@ -32,7 +32,7 @@ const Project = () => {
                     <div className="card card2">
                         <img src={TripTips} className="card-img-top" alt="..."></img>
                         <div className="card-body">
-                            <h5 className="card-title">Trip Tips</h5>
+                            <h5 className="card-title" style={{fontFamily: "fantasy"}}>Trip Tips</h5>
                             <p className="card-text" style={{fontFamily: "fantasy", fontSize: "16pt"}}>Above, you can see how a recipe displays on the Ingredience app.&nbsp;
                                 After adding ingredients to use in preparing food, correlating recipes display in a
                                 carousel of images.&nbsp;
@@ -50,7 +50,7 @@ const Project = () => {
                     <div className="card card3">
                         <img src={CodingQuiz} className="card-img-top" alt="..."></img>
                         <div className="card-body">
-                            <h5 className="card-title">Coding Quiz</h5>
+                            <h5 className="card-title" style={{fontFamily: "fantasy"}}>Coding Quiz</h5>
                             <p className="card-text" style={{fontFamily: "fantasy", fontSize: "16pt"}}>      The Coding Quiz is designed to display how 21st century test-taking should take place.&nbsp;
                             The Coding Quiz is created to take users' answers, dynamically check for correctness, and
                             respond accordingly.&nbsp;
@@ -65,7 +65,7 @@ const Project = () => {
                     <div className="card card4">
                         <img src={WeatherApp} className="card-img-top" alt="..."></img>
                         <div className="card-body">
-                            <h5 className="card-title">Weather Dashboard</h5>
+                            <h5 className="card-title" style={{fontFamily: "fantasy"}}>Weather Dashboard</h5>
                             <p className="card-text" style={{fontFamily: "fantasy", fontSize: "16pt"}}>The Dynamic Weather APP allows users to find weather conditions for multiple
                             cities simultaneously with just one click.&nbsp;
                             The Dynamic Weather APP displays temperature, weather conditions, humidity percentage, wind
@@ -81,7 +81,7 @@ const Project = () => {
                     <div className="card">
                         <img src={EmployeeManagementCLI} className="card-img-top" alt="..."></img>
                         <div className="card-body">
-                            <h5 className="card-title">Employee Tracker Command-Line Interface</h5>
+                            <h5 className="card-title" style={{fontFamily: "fantasy"}}>Employee Tracker Command-Line Interface</h5>
                             <p className="card-text" style={{fontFamily: "fantasy", fontSize: "16pt"}}>The Features of the Employee Tracker allow managers to "View all Employees", "View all Departments", "View all Roles", "View all Employees By Department", "View all Employees By Manager", "Add Employee", "Delete Employee", "Delete Employee", "Delete Employee", "Add Departments", "Delete Department", "Add Roles", "Update Employee Role", "Delete Role, "Update Employee Manager", "View Total Budget".&nbsp;
                             The Employee Tracker is perfect for business who want to know about all the activity inside their business. Managing departments, roles, and employees in the company is the most important aspect of being a successful product manager.  &nbsp;In a fast-paced world, organization needs to be efficient.
                             </p>
@@ -93,7 +93,7 @@ const Project = () => {
                     <div className="card card6">
                         <img src={EmployeeDirectory} className="card-img-top" alt="..."></img>
                         <div className="card-body">
-                            <h5 className="card-title">Employee Directory</h5>
+                            <h5 className="card-title" style={{fontFamily: "fantasy"}}>Employee Directory</h5>
                             <p className="card-text" style={{fontFamily: "fantasy", fontSize: "16pt"}}>This project is an employee directory created with React. It allows people to instantly search for information about Employees just by typing a name in the search bar. In addition to searching for employees, the user can also sort employees by image, name, phone, email, and date-of-birth.&nbsp;
                             An employee or manager would benefit greatly from being able to view non-sensitive data about other employees. It would be particularly helpful to be able to filter employees by name.&nbsp;
                             Given a table of random users, when the user loads the page, a table of employees should render. &nbsp;The user is able to Sort the table by image, name, phone, email, and date-of-birth.&nbsp;
